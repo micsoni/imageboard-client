@@ -5,7 +5,7 @@ export default class List extends Component {
     return (
       <div>
         <h3>{this.props.title}</h3>
-        <img src={this.props.url} />
+        <img src={this.props.url} alt="" />
       </div>
     );
   }

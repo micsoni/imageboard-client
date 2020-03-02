@@ -8,6 +8,12 @@ export default function(state = initialState, action = {}) {
         all: action.payload
       };
     }
+    case "NEW_IMAGE": {
+      return {
+        ...state,
+        all: [action.payload, ...state.all]
+      };
+    }
     default:
       return state;
   }

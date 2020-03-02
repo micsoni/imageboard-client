@@ -2,6 +2,8 @@ import React from "react";
 import { getImages } from "../store/actions/images";
 import { connect } from "react-redux";
 import List from "./List.js";
+import CreateFormContainer from "./CreateFormContainer";
+import LoginFormContainer from "./LoginFormContainer";
 
 class ListContainer extends React.Component {
   componentDidMount() {
@@ -19,11 +21,29 @@ class ListContainer extends React.Component {
       return <List url={image.url} title={image.title} key={image.id} />;
     });
 
-    return <div>{displayImages}</div>;
+    if (!this.props.userLoggedIn) {
+      return (
+        <div>
+          <div>
+            <LoginFormContainer />
+          </div>
+          <div>{displayImages}</div>
+        </div>
+      );
+    } else {
+      return (
+        <div>
+          <div>
+            <CreateFormContainer />
+          </div>
+          <div>{displayImages}</div>
+        </div>
+      );
+    }
   }
 }
 function mapStateToProps(state) {
-  return { images: state.images.all };
+  return { images: state.images.all, userLoggedIn: state.user };
 }
 const mapDispatchToProps = { getImages };
 export default connect(mapStateToProps, mapDispatchToProps)(ListContainer);
