@@ -38,7 +38,7 @@ export const createImage = data => (dispatch, getState) => {
   request
     .post(`${baseUrl}/images`)
     .set("Authorization", `Bearer ${user.jwt}`)
-    .send(data)
+    .send({ ...data, userId: user.id })
     .then(response => {
       const action = newImage(response.body);
       dispatch(action);

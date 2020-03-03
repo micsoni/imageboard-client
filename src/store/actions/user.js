@@ -28,19 +28,19 @@ export const login = (email, password) => dispatch => {
 // const c = { a }
 // c.a === 1
 
-function createUser(userEmail) {
+function createUser(userName) {
   return {
     type: "CREATE_USER",
-    payload: userEmail
+    payload: userName
   };
 }
 
-export const singup = (email, password) => dispatch => {
+export const singup = (email, password, username) => dispatch => {
   request
     .post(`${baseUrl}/user`)
-    .send({ email: email, password: password })
+    .send({ email: email, password: password, username: username })
     .then(response => {
-      const action = createUser(response.body.email);
+      const action = createUser(response.body.username);
       dispatch(action);
     })
     .catch(console.error);

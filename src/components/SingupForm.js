@@ -6,6 +6,15 @@ export default class SingupForm extends Component {
       <div>
         <p>Not a member yet? Singup!</p>
         <form onSubmit={this.props.onSubmit}>
+        <div className="form-group col-6">
+            <label className="col-sm-2">Name</label>
+            <input
+              type="text"
+              name="username"
+              onChange={this.props.onChange}
+              value={this.props.values.username}
+            />
+          </div>
           <div className="form-group col-6">
             <label className="col-sm-2">Email</label>
             <input

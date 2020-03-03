@@ -4,10 +4,10 @@ import { connect } from "react-redux";
 import { singup} from "../store/actions/user";
 
 class SingupFormContainer extends React.Component {
-  state = { email: "", password: "" };
+  state = { email: "", password: "", username:"" };
   onSubmit = event => {
     event.preventDefault();
-    this.props.singup(this.state.email, this.state.password);
+    this.props.singup(this.state.email, this.state.password, this.state.username);
   };
   onChange = event => {
     this.setState({
