@@ -8,7 +8,7 @@ export default function(state = initialState, action = {}) {
         all: action.payload
       };
     }
-    case "NEW_USER": {
+    case "CREATE_USER": {
       return {
         ...state,
         all: [action.payload, ...state.all]
