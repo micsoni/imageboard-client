@@ -4,6 +4,7 @@ export default class LoginForm extends Component {
   render() {
     return (
       <div>
+        <p>Log in to post images</p>
         <form onSubmit={this.props.onSubmit}>
           <div>
             <div>

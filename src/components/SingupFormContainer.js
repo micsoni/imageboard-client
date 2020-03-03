@@ -16,11 +16,15 @@ class SingupFormContainer extends React.Component {
   };
   render() {
     return (
-      <SingupForm
+      <div>
+         <div>Not a member yet? Singup!</div>
+         <SingupForm
         onSubmit={this.onSubmit}
         onChange={this.onChange}
         values={this.state}
       />
+      </div>
+     
     );
   }
 }
