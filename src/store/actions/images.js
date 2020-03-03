@@ -1,6 +1,6 @@
 import request from "superagent";
 
-const baseUrl = "http://localhost:4000";
+const baseUrl = "https://ancient-river-17271.herokuapp.com";
 function allImages(imageData) {
   return {
     type: "ALL_IMAGES",
