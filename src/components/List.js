@@ -4,13 +4,13 @@ export default class List extends Component {
   render() {
     const displayImages = this.props.images.map(image => {
       return (
-        <div key={image.id}>
-          <h3>{image.title}</h3>
-          <img src={image.url} alt="" />
+        <div className="col-lg-4 col-md-6 col-12" key={image.id}>
+          <h3 className="text-center">{image.title}</h3>
+          <img src={image.url} alt="" className="mr-3" />
         </div>
       );
     });
 
-    return <div>{displayImages}</div>;
+    return <div className="row">{displayImages}</div>;
   }
 }

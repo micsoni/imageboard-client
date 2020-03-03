@@ -3,6 +3,7 @@ import { getImages } from "../store/actions/images";
 import { connect } from "react-redux";
 import List from "./List.js";
 import Forms from "./Forms";
+import "./ListContainer.css";
 
 class ListContainer extends React.Component {
   componentDidMount() {
@@ -17,8 +18,8 @@ class ListContainer extends React.Component {
 
     return (
       <div>
-        {forms}
-        {displayImages}
+        <div>{forms}</div>
+        <div>{displayImages}</div>
       </div>
     );
   }

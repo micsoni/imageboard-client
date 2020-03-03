@@ -1,6 +1,7 @@
 import request from "superagent";
 
 const baseUrl = "https://ancient-river-17271.herokuapp.com";
+
 function allImages(imageData) {
   return {
     type: "ALL_IMAGES",

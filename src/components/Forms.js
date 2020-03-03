@@ -8,7 +8,7 @@ export default class Forms extends Component {
   render() {
     if (!this.props.userLoggedIn) {
       return (
-        <div>
+        <div className="form-row">
           <LoginFormContainer />
           <SingupFormContainer />
         </div>
