@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-export default class LoginForm extends Component {
+export default class SingupForm extends Component {
   render() {
     return (
       <div>
@@ -26,7 +26,7 @@ export default class LoginForm extends Component {
             </div>
           </div>
           <button type="submit" className="btn btn-dark">
-            Login
+            Singup
           </button>
         </form>
       </div>

@@ -6,6 +6,11 @@ export default function(state = initialState, action = {}) {
       return (action.payload)  
       
     }
+    case "CREATE_USER": {
+      return (action.payload)  
+      
+    }
+
     default:
       return state;
   }

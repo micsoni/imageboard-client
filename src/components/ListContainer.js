@@ -4,7 +4,7 @@ import { connect } from "react-redux";
 import List from "./List.js";
 import CreateFormContainer from "./CreateFormContainer";
 import LoginFormContainer from "./LoginFormContainer";
-
+import SingupFormContainer from "./SingupFormContainer";
 class ListContainer extends React.Component {
   componentDidMount() {
     this.props.getImages();
@@ -26,6 +26,10 @@ class ListContainer extends React.Component {
         <div>
           <div>
             <LoginFormContainer />
+          </div>
+          <div>Not a member yet? Singup!</div>
+          <div>
+            <SingupFormContainer />
           </div>
           <div>{displayImages}</div>
         </div>

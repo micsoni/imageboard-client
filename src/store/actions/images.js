@@ -30,7 +30,9 @@ function newImage(newImageData) {
 
 export const createImage = data => (dispatch, getState) => {
   const state = getState();
+
   const { user } = state;
+  console.log(user);
 
   request
     .post(`${baseUrl}/images`)
